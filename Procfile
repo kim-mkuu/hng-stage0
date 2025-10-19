@@ -1,1 +1,1 @@
-web: gunicorn procfile_api.wsgi --log-file -
+web: gunicorn profile_api.wsgi --log-file -
