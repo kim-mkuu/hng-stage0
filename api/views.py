@@ -21,6 +21,8 @@ def welcome(request):
         "documentation": "Visit /me to get profile information with a dynamic cat fact" 
     }
     return Response(data, status=status.HTTP_200_OK)
+
+@api_view(['GET']) #fix missing decorator
 def profile_endpoint(request):
     cat_fact = "Unable to fetch cat at this time"
 
