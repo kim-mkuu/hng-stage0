@@ -12,6 +12,15 @@ import logging
 logger = logging.getLogger(__name__)
 
 @api_view(['GET'])
+def welcome(request):
+    data = {
+        "message": "Welcome to HNG Stage 0 Profile API",
+        "endpoints": {
+            "profile": "/me"
+        },
+        "documentation": "Visit /me to get profile information with a dynamic cat fact" 
+    }
+    return Response(data, status=status.HTTP_200_OK)
 def profile_endpoint(request):
     cat_fact = "Unable to fetch cat at this time"
 
